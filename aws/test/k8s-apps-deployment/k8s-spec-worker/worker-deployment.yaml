@@ -16,7 +16,7 @@ spec:
         app: worker
     spec:
       containers:
-      - image: docker.io/hutinskit/worker
+      - image: 783411994983.dkr.ecr.us-east-1.amazonaws.com/worker
         name: worker
         env:
         - name: REDIS_HOST

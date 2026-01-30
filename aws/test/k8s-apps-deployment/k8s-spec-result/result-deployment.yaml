@@ -16,7 +16,7 @@ spec:
         app: result
     spec:
       containers:
-      - image: docker.io/hutinskit/result
+      - image: 783411994983.dkr.ecr.us-east-1.amazonaws.com/result
         name: result
         env:
         - name: DATABASE_URL

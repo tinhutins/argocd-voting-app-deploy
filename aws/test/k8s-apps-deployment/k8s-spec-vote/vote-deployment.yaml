@@ -16,7 +16,7 @@ spec:
         app: vote
     spec:
       containers:
-      - image: docker.io/hutinskit/vote
+      - image: 783411994983.dkr.ecr.us-east-1.amazonaws.com/vote
         name: vote
         env:
         - name: REDIS_HOST
