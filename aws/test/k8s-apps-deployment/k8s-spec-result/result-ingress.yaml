@@ -1,22 +1,21 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: vote-test-ingress
+  name: result-test-ingress
   namespace: vote
   labels:
-    app: vote
+    app: result
   annotations:
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
 spec:
-  ingressClassName: nginx
   rules:
-  - host: "tino-vote-test.tinotest.com"  
+  - host: "result-test.riftdevops.com"  
     http:
       paths:
       - pathType: Prefix
         path: /      
         backend:
           service: 
-            name: vote
+            name: result
             port:
-              number: 80
+              number: 4000

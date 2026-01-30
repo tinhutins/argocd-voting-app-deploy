@@ -11,8 +11,8 @@ spec:
     server: https://kubernetes.default.svc 
   project: default
   source:
-    path: k8s-apps-deployment/k8s-spec-worker
-    repoURL: https://github.com/tinhutins/argocd-vote-deploy
+    path: aws/test/k8s-apps-deployment/k8s-spec-worker
+    repoURL: https://github.com/tinhutins/argocd-voting-app-deploy
     targetRevision: HEAD
   syncPolicy:
     automated:

@@ -16,6 +16,9 @@ spec:
         app: vote
     spec:
       containers:
+      env:
+      - name: REDIS_HOST
+        value: "redis"
       - image: docker.io/hutinskit/vote
         name: vote
         ports:

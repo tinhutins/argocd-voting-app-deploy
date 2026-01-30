@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+  namespace: vote
+spec:
+  type: ExternalName
+  externalName: riftdevops-test-pg.c0hqwcmiq4i1.us-east-1.rds.amazonaws.com
+  ports:
+    - name: postgres
+      port: 5432
+      targetPort: 5432
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   labels:
+#     app: db
+#   name: db
+#   namespace: vote
+# spec:
+#   type: ClusterIP
+#   ports:
+#   - name: "db-service"
+#     port: 5432
+#     targetPort: 5432
+#   selector:
+#     app: db
+  
