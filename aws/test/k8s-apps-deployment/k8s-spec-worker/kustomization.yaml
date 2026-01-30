@@ -5,6 +5,8 @@ resources:
 - worker-deployment.yaml
 
 images:
+- name: 783411994983.dkr.ecr.us-east-1.amazonaws.com/worker
+  newTag: v1.0.160
 - name: docker.io/hutinskit/worker
   newName: 783411994983.dkr.ecr.us-east-1.amazonaws.com/worker
   newTag: v1.0.159
