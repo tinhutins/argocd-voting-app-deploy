@@ -7,5 +7,6 @@ resources:
 - result-ingress.yaml
 
 images:
-- name: 783411994983.dkr.ecr.us-east-1.amazonaws.com/result
+- name: docker.io/hutinskit/result
+  newName: 783411994983.dkr.ecr.us-east-1.amazonaws.com/result
   newTag: v1.0.159
