@@ -6,6 +6,6 @@ resources:
 
 images:
 - name: 783411994983.dkr.ecr.us-east-1.amazonaws.com/worker
-  newTag: v1.0.156
+  newTag: v1.0.159
 - name: docker.io/hutinskit/worker
   newTag: v1.0.156
