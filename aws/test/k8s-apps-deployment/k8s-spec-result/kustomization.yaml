@@ -9,3 +9,8 @@ resources:
 images:
 - name: 783411994983.dkr.ecr.us-east-1.amazonaws.com/result
   newTag: v1.0.159
+<<<<<<< HEAD
+=======
+- name: docker.io/hutinskit/result
+  newTag: v1.0.156
+>>>>>>> e8c94e9994054915f690265b553391e5186e83a8
