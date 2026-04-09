@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- result-deployment.yaml
+- result-service.yaml
+- result-ingress.yaml
+
+images:
+- name: riftdevopsacr.azurecr.io/result
+  newTag: v1.0.170

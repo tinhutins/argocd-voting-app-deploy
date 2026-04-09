@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: redis-app-azure
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: vote
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: azure/test/k8s-apps-deployment/k8s-spec-redis
+    repoURL: https://github.com/tinhutins/argocd-voting-app-deploy
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+    - CreateNamespace=true
