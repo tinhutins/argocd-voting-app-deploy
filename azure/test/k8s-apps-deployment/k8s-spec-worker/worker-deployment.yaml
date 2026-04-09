@@ -21,6 +21,11 @@ spec:
         env:
         - name: REDIS_HOST
           value: "redis"
+        - name: REDIS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: redis-credentials
+              key: REDIS_PASSWORD
         - name: JDBC_URL
           valueFrom:
             secretKeyRef:
