@@ -10,4 +10,4 @@ resources:
 
 images:
 - name: riftdevopsacr.azurecr.io/vote
-  newTag: v1.0.173
+  newTag: v1.0.174
