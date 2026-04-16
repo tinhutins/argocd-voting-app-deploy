@@ -6,4 +6,4 @@ resources:
 
 images:
 - name: riftdevopsacr.azurecr.io/worker
-  newTag: v1.0.175
+  newTag: v1.0.4
