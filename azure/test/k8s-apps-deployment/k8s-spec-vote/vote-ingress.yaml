@@ -6,9 +6,15 @@ metadata:
   labels:
     app: vote
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: web
+    # Uncomment for Application Gateway ingress (enable_appgw = true in terraform)
+    kubernetes.io/ingress.class: azure/application-gateway
+    # Uncomment for Traefik ingress (enable_appgw = false in terraform)
+    # traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
-  ingressClassName: traefik
+  # Application Gateway
+  ingressClassName: azure/application-gateway
+  # Traefik
+  # ingressClassName: traefik
   rules:
   - host: "vote-test.riftdevops.com"
     http:
