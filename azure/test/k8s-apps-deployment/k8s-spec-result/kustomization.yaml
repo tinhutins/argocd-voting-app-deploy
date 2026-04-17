@@ -8,4 +8,4 @@ resources:
 
 images:
 - name: riftdevopsacr.azurecr.io/result
-  newTag: v1.0.7
+  newTag: v1.0.8
