@@ -6,13 +6,13 @@ metadata:
   labels:
     app: vote
   annotations:
-    # Uncomment for Application Gateway ingress (enable_appgw = true in terraform)
+    # Application Gateway ingress (enable_appgw = true in terraform)
     kubernetes.io/ingress.class: azure/application-gateway
-    # Uncomment for Traefik ingress (enable_appgw = false in terraform)
+    # Traefik ingress (enable_appgw = false in terraform)
     # traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
-  # Application Gateway
-  ingressClassName: azure/application-gateway
+  # Application Gateway — IngressClass name registered by the managed AGIC add-on
+  ingressClassName: azure-application-gateway
   # Traefik
   # ingressClassName: traefik
   rules:
