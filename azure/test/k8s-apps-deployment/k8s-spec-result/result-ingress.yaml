@@ -5,15 +5,10 @@ metadata:
   namespace: vote
   labels:
     app: result
-  annotations:
-    # Application Gateway ingress (enable_appgw = true in terraform)
-    kubernetes.io/ingress.class: azure/application-gateway
-    # Traefik ingress (enable_appgw = false in terraform)
-    # traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
-  # Application Gateway — IngressClass name registered by the managed AGIC add-on
+  # Application Gateway (enable_appgw = true in terraform)
   ingressClassName: azure-application-gateway
-  # Traefik
+  # Traefik (enable_appgw = false) — swap ingressClassName:
   # ingressClassName: traefik
   rules:
   - host: "result-test.riftdevops.com"
